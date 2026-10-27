@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About - Nuwan</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="about.css" />
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-nb">NB</span>
+    </div>
+
+    <nav>
+  <a href="index.html">HOME</a>
+  <a href="about.html">ABOUT</a>
+
+  <!-- DROPDOWN -->
+  <div class="dropdown">
+    <a href="#">PROFESSION ▾</a>
+
+    <div class="dropdown-menu">
+      <a href="business.html">Business</a>
+      <a href="law.html">Law</a>
+    </div>
+  </div>
+
+  <a href="lions.html">LIONS</a>
+  <a href="politics.html">POLITICS</a>
+  <a href="contact.html">CONTACT</a>
+</nav>
+
+</header>
+
+<section class="about-top">
+
+  <!-- LEFT IMAGE -->
+  <div class="about-image">
+    <img src="images/nb.jpeg" alt="Nuwan">
+  </div>
+
+  <!-- RIGHT CONTENT -->
+  <div class="about-content">
+
+    <div class="top-line"></div>
+
+    <h1>ABOUT.</h1>
+
+    <h3>
+      I’m passionate about leadership, service, and impact.
+    </h3>
+
+    <p>
+      I am a lawyer, migration consultant, business owner, and public servant 
+      committed to empowering individuals and communities through professional 
+      excellence and national service.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- ================= BUSINESS ================= -->
+
+
+
+<section class="scroll-section alt">
+  <div class="scroll-img">
+    <img src="images/couple.jpg">
+  </div>
+
+  <div class="scroll-text">
+    <p>
+      My focus is on building trust, delivering results, and helping
+      clients achieve international success through strategic guidance.
+    </p>
+
+    <a href="business.html" class="btn">VIEW BUSINESS</a>
+  </div>
+</section>
+
+
+<!-- ================= LAW ================= -->
+
+<section class="scroll-section">
+  <div class="scroll-img">
+    <img src="images/nb.jpeg">
+  </div>
+
+  <div class="scroll-text">
+    <h2>Legal Profession</h2>
+    <p>
+      I am an Attorney-at-Law with extensive experience in legal practice
+      and international migration law.
+    </p>
+  </div>
+</section>
+
+<section class="scroll-section alt">
+  <div class="scroll-img">
+    <img src="images/baby.jpg">
+  </div>
+
+  <div class="scroll-text">
+    <p>
+      My legal work is guided by ethics, professionalism,
+      and a commitment to justice.
+    </p>
+
+    <a href="law.html" class="btn">VIEW LAW</a>
+  </div>
+</section>
+
+
+<!-- ================= LIONS ================= -->
+
+<section class="scroll-section">
+  <div class="scroll-img">
+    <img src="images/baby.jpg">
+  </div>
+
+  <div class="scroll-text">
+    <h2>Lions Leadership</h2>
+    <p>
+      I served as District Governor of 306A2 and Immediate Multiple Council Chairperson.
+    </p>
+  </div>
+</section>
+
+<section class="scroll-section alt">
+  <div class="scroll-img">
+    <img src="images/baby.jpg">
+  </div>
+
+  <div class="scroll-text">
+    <p>
+      My leadership focused on community service,
+      humanitarian work, and empowering future leaders.
+    </p>
+
+    <a href="lions.html" class="btn">VIEW LIONS</a>
+  </div>
+</section>
+
+
+<!-- ================= POLITICS ================= -->
+
+<section class="scroll-section">
+  <div class="scroll-img">
+    <img src="images/baby.jpg">
+  </div>
+
+  <div class="scroll-text">
+    <h2>Political Engagement</h2>
+    <p>
+      I am actively involved in politics and the founder of
+      Deshapremi Jathika Peramuna.
+    </p>
+  </div>
+</section>
+
+<section class="scroll-section alt">
+  <div class="scroll-img">
+    <img src="images/baby.jpg">
+  </div>
+
+  <div class="scroll-text">
+    <p>
+      My vision is to contribute toward national development
+      and meaningful change for society.
+    </p>
+
+    <a href="politics.html" class="btn">VIEW POLITICS</a>
+  </div>
+</section>
+
+<script>
+const sections = document.querySelectorAll(".scroll-section");
+
+function revealSections() {
+  const triggerBottom = window.innerHeight * 0.85;
+
+  sections.forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top;
+
+    if (sectionTop < triggerBottom) {
+      section.classList.add("show");
+    } else {
+      section.classList.remove("show"); // 🔥 makes animation repeat
+    }
+  });
+}
+
+window.addEventListener("scroll", revealSections);
+window.addEventListener("load", revealSections);
+</script>
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- LEFT LINKS -->
+    <div class="footer-col">
+      <a href="index.html"><b>HOME</b></a>
+      <a href="about.html"><b>ABOUT</b></a>
+      <a href="business.html"><b>BUSINESS</b></a>
+      <a href="speaking.html"><b>SPEAKING</b></a>
+      
+    </div>
+
+    <!-- CENTER -->
+    <div class="footer-col center">
+      <a href="contact.html">CONTACT</a>
+      <div class="social-icons">
+  <a href="https://au.linkedin.com/in/nuwan-ballantudawa-170aa623" target="_blank">
+    <i class="fab fa-linkedin"></i>
+  </a>
+
+  <a href="https://x.com/ballantudawa?lang=fr" target="_blank">
+    <i class="fab fa-x-twitter"></i>
+  </a>
+
+  <a href="https://www.facebook.com/confirmemail.php?next=https%3A%2F%2Fwww.facebook.com%2Fnuwan.ballantudawa%2F#" target="_blank">
+    <i class="fab fa-facebook"></i>
+  </a>
+</div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="footer-col right">
+      <a href="privacy.html">PRIVACY POLICY</a>
+      <a href="terms.html">TERMS OF USE</a>
+      <p class="highlight">Eureka Consultants/p>
+      <p class="credit">Designed by NSA</p>
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>

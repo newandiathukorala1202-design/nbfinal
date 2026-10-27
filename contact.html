@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact | Nuwan Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    main {
+      padding-top: 120px;
+      min-height: calc(100vh - 120px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .contact-section {
+      width: min(920px, 100%);
+      margin: 0 20px 80px;
+      padding: 50px;
+      background: rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      box-shadow: 0 20px 80px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(18px);
+    }
+    .contact-heading {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+    .contact-heading h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      margin-bottom: 0;
+      line-height: 1.05;
+    }
+    .contact-heading p {
+      color: #d6d6d6;
+      line-height: 1.8;
+      max-width: 760px;
+    }
+    .contact-form {
+      display: grid;
+      gap: 22px;
+    }
+    .contact-form label {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+      color: #f3f3f3;
+      letter-spacing: 0.75px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      color: white;
+      padding: 16px 18px;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.25s ease, background 0.25s ease;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #fff;
+      background: rgba(255, 255, 255, 0.12);
+    }
+    .contact-form textarea {
+      min-height: 210px;
+      resize: vertical;
+    }
+    .contact-form .form-row {
+      display: grid;
+      gap: 16px;
+    }
+    .contact-form .row-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .contact-form button {
+      width: fit-content;
+      border: 1px solid white;
+      padding: 16px 32px;
+      border-radius: 10px;
+      background: transparent;
+      color: white;
+      cursor: pointer;
+      transition: background 0.25s ease, color 0.25s ease;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+    }
+    .contact-form button:hover {
+      background: white;
+      color: #111;
+    }
+    @media (max-width: 720px) {
+      .contact-section {
+        padding: 32px 20px;
+      }
+      .contact-heading h1 {
+        font-size: 2.45rem;
+      }
+      .contact-form .row-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-nb">NB</span>
+    </div>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <div class="dropdown">
+        <a href="#">PROFESSION ▾</a>
+        <div class="dropdown-menu">
+          <a href="business.html">Business</a>
+          <a href="law.html">Law</a>
+        </div>
+      </div>
+      <a href="lions.html">LIONS</a>
+      <a href="politics.html">POLITICS</a>
+      <a href="contact.html" class="active">CONTACT</a>
+    </nav>
+  </header>
+  <main>
+    <section class="contact-section">
+      <div class="contact-heading">
+        <h1>Contact</h1>
+        <p>Use the form below to send a message directly. Replace the hidden Web3Forms fields with your own access key and destination email address.</p>
+      </div>
+      <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="fc823f0f-8080-4da8-b847-6879812ad462" />
+        <input type="hidden" name="subject" value="New message from portfolio contact form" />
+
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required />
+        </div>
+
+        <div class="form-row row-2">
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="Your email" required />
+          </div>
+          <div>
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" placeholder="Message subject" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Write your message" required></textarea>
+        </div>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+  <script>
+    const contactForm = document.getElementById('contactForm');
+
+    if (contactForm) {
+      contactForm.addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        const formData = new FormData(contactForm);
+        const payload = new URLSearchParams();
+
+        for (const [key, value] of formData.entries()) {
+          payload.append(key, value);
+        }
+
+        try {
+          const response = await fetch(contactForm.action, {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+            },
+            body: payload.toString()
+          });
+
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+
+          const result = await response.json();
+
+          if (result.success) {
+            alert('Message sent successfully. Thank you!');
+            contactForm.reset();
+          } else {
+            alert('There was an error sending your message. Please try again.');
+          }
+        } catch (error) {
+          console.error(error);
+          alert('Unable to send the message at this time. Please try again later.');
+        }
+      });
+    }
+  </script>
+</body>
+</html>

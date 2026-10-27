@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <link rel="stylesheet" href="business.css" />
+</head>
+<body>
+
+
+<!-- NAVBAR -->
+
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-nb">NB</span>
+    </div>
+
+    <nav>
+  <a href="index.html">HOME</a>
+  <a href="about.html">ABOUT</a>
+
+  <!-- DROPDOWN -->
+  <div class="dropdown">
+    <a href="#">PROFESSION ▾</a>
+
+    <div class="dropdown-menu">
+      <a href="business.html">Business</a>
+      <a href="law.html">Law</a>
+    </div>
+  </div>
+
+  <a href="lions.html">LIONS</a>
+  <a href="politics.html">POLITICS</a>
+  <a href="contact.html">CONTACT</a>
+</nav>
+
+
+</header>
+
+<section class="parallax-hero">
+  <div class="overlay">
+    <h1 class="hero-title">EUREKA CONSULTANTS</h1>
+  </div>
+</section>
+
+
+
+<script>
+  const title = document.querySelector('.hero-title');
+
+  window.addEventListener('scroll', () => {
+    const trigger = window.innerHeight * 0.8;
+    const titleTop = title.getBoundingClientRect().top;
+
+    if (titleTop < trigger) {
+      title.classList.add('show');
+    }
+  });
+</script>
+
+<!-- EUREKA PROFILE SECTION -->
+<section class="nuwan-section">
+
+  <!-- LEFT IMAGE -->
+  <div class="eureka-left">
+    <img src="images/dad.jpg" alt="Eureka Consultants">
+  </div>
+
+  <!-- RIGHT CONTENT -->
+  <div class="eureka-right">
+    <h2 class="fade-up">MD</h2>
+
+    <p class="fade-up">
+      Nuwan Ballantudawa is the Founder and Managing Director of 
+      <strong>Eureka Consultants</strong>, a trusted name in immigration and advisory services.
+      He is a <strong>Registered Migration Agent</strong> and a 
+      <strong>Licensed Immigration Adviser</strong> holding a current licence, 
+      authorized to provide immigration advice in accordance with the official 
+      Code of Conduct.
+    </p>
+
+    <p class="fade-up">
+      With extensive experience in migration law and international consultancy, 
+      he delivers ethical, compliant, and result-driven solutions for individuals 
+      and businesses seeking global opportunities.
+    </p>
+
+    <!-- BUTTONS -->
+    <div class="btn-group fade-up">
+      <a href="https://portal.mara.gov.au/search-the-register-of-migration-agents/register-of-migration-agent-details/?ContactID=f1d0726f-a352-e311-9402-005056ab0eca"
+         target="_blank" class="orange-btn">
+        MARA REGISTRATION
+      </a>
+
+      <a href="https://app.mbieregisters.govt.nz/iaa/ui/XP-f01BlWe70DgbPcpCqf50gxtI2dJsVLO6r8O3-FhMyO0mHQkV54y5mF8d-Hkx9od1xj_1J2sU8wygTD0JPhv4aSbeTogIj9MOEBF-AuZGXS8-SS"
+         target="_blank" class="orange-btn">
+        IAA LICENCE
+      </a>
+    </div>
+
+    <!-- circles-->
+   <div class="circle-decor">
+  <div class="dot"></div>
+  <div class="dot"></div>
+</div>
+
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const title = document.querySelector('.hero-title');
+  const faders = document.querySelectorAll('.fade-up');
+
+  window.addEventListener('scroll', () => {
+
+    const trigger = window.innerHeight * 0.8;
+
+    // HERO TITLE (safe check)
+    if (title) {
+      const titleTop = title.getBoundingClientRect().top;
+      if (titleTop < trigger) {
+        title.classList.add('show');
+      }
+    }
+
+    // OTHER ELEMENTS
+    faders.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if (top < trigger) {
+        el.classList.add('show');
+      }
+    });
+
+  });
+
+});
+</script>
+
+
+<section class="eureka-section">
+  <div class="container">
+    
+    <h2 class="section-title">
+      ABOUT EUREKA CONSULTANTS
+    </h2>
+     <!-- TEXT + IMAGE ROW -->
+    <div class="about-row">
+
+      <!-- LEFT TEXT -->
+      <div class="about-text">
+        <p>
+          At Eureka Consultants, our purpose is to transform aspirations into reality. 
+          Whether it’s studying at a world-class university, building a career overseas, 
+          or reuniting with loved ones, we believe in empowering individuals and families 
+          to pursue opportunities across Australia, New Zealand, and beyond—with confidence and clarity.
+        </p>
+
+        <!-- SECOND PARAGRAPH -->
+        <p>
+          With nearly two decades of industry experience, Eureka Consultants has built a reputation 
+          for integrity, professionalism, and results. Our expert team provides personalized guidance, 
+          ensuring every client receives a clear pathway toward their international education, migration, 
+          and career goals.
+        </p>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="about-image">
+        <img src="images/eureka.png" alt="Eureka Consultants Logo">
+      </div>
+
+    </div>
+
+    <div class="cards">
+
+      <!-- Card 1 -->
+      <div class="card">
+        <h3>About Eureka Consultants</h3>
+        <p>
+          At Eureka Consultants, our purpose is to transform aspirations into reality. 
+          Whether it’s studying at a world-class university, building a career overseas, 
+          or reuniting with loved ones, we believe in empowering individuals and families 
+          to pursue opportunities across Australia, New Zealand, and beyond—with confidence and clarity.
+        </p>
+        <a href="https://www.eurekaconsultants.net/" target="_blank" class="btn">
+          VISIT WEBSITE
+        </a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <h3>Our Location</h3>
+        <p>
+          We are conveniently located in Delkanda, Sri Lanka, making it easy for clients 
+          to visit us and receive personalized consultation for their migration and education goals.
+        </p>
+        <a href="https://maps.google.com/?q=Delkanda,Sri+Lanka" target="_blank" class="btn">
+          VIEW MAP
+        </a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <h3>Contact Us</h3>
+        <p>
+          📞 +94 76 691 5213<br><br>
+          Stay connected with us for the latest updates, opportunities, and success stories.
+        </p>
+        <div class="social-buttons">
+          <a href="#" class="btn small">FACEBOOK</a>
+          <a href="#" class="btn small">TIKTOK</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="insights">
+  <div class="container">
+
+    <h2 class="section-title">Business Insights</h2>
+
+    <div class="carousel-wrapper">
+
+      <!-- LEFT ARROW -->
+      <button class="arrow left" onclick="scrollVideos(-1)">❮</button>
+
+      <!-- VIDEO ROW -->
+      <div class="videos" id="videoSlider">
+
+        <!-- VIDEO 1 -->
+        <a href="https://www.youtube.com/watch?v=akVKJQ_w6TM" target="_blank" class="video-card">
+          <img src="https://img.youtube.com/vi/akVKJQ_w6TM/maxresdefault.jpg">
+          <div class="play-btn">▶</div>
+        </a>
+
+        <!-- VIDEO 2 -->
+        <a href="https://www.youtube.com/watch?v=qaC0PKb_pfc" target="_blank" class="video-card">
+          <img src="https://img.youtube.com/vi/qaC0PKb_pfc/maxresdefault.jpg">
+          <div class="play-btn">▶</div>
+        </a>
+
+        <!-- VIDEO 3 -->
+        <a href="https://youtu.be/oiW2IVoGj7k" target="_blank" class="video-card">
+          <img src="https://img.youtube.com/vi/oiW2IVoGj7k/maxresdefault.jpg">
+          <div class="play-btn">▶</div>
+        </a>
+
+        <!-- VIDEO 4 -->
+        <a href="https://youtu.be/0PWrVtIYZ0s" target="_blank" class="video-card">
+          <img src="https://img.youtube.com/vi/0PWrVtIYZ0s/maxresdefault.jpg">
+          <div class="play-btn">▶</div>
+        </a>
+
+        <!-- VIDEO 5 -->
+        <a href="https://youtu.be/0J3sBpLWyGg" target="_blank" class="video-card">
+          <img src="https://img.youtube.com/vi/0J3sBpLWyGg/maxresdefault.jpg">
+          <div class="play-btn">▶</div>
+        </a>
+
+      </div>
+
+      <!-- RIGHT ARROW -->
+      <button class="arrow right" onclick="scrollVideos(1)">❯</button>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+function scrollVideos(direction) {
+  const slider = document.getElementById("videoSlider");
+  const scrollAmount = 650; // 🔥 increased
+
+  slider.scrollBy({
+    left: direction * scrollAmount,
+    behavior: "smooth"
+  });
+}
+</script>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <h2>TESTIMONIALS</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <img src="images/baby.jpg">
+      <p>
+        “Professional, reliable and highly knowledgeable immigration expert.”
+      </p>
+      <span>— Client</span>
+    </div>
+
+    <div class="card">
+      <img src="images/funny.jpg">
+      <p>
+        “Nuwan guided us through the entire process smoothly and successfully.”
+      </p>
+      <span>— Client</span>
+    </div>
+
+    <div class="card">
+      <img src="images/mountain.jpg">
+      <p>
+        “Highly recommended for immigration and legal consultancy.”
+      </p>
+      <span>— Client</span>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- LEFT LINKS -->
+    <div class="footer-col">
+      <a href="index.html"><b>HOME</b></a>
+      <a href="about.html"><b>ABOUT</b></a>
+      <a href="business.html"><b>BUSINESS</b></a>
+      <a href="speaking.html"><b>SPEAKING</b></a>
+      
+    </div>
+
+    <!-- CENTER -->
+    <div class="footer-col center">
+      <a href="contact.html">CONTACT</a>
+      <div class="social-icons">
+  <a href="https://au.linkedin.com/in/nuwan-ballantudawa-170aa623" target="_blank">
+    <i class="fab fa-linkedin"></i>
+  </a>
+
+  <a href="https://x.com/ballantudawa?lang=fr" target="_blank">
+    <i class="fab fa-x-twitter"></i>
+  </a>
+
+  <a href="https://www.facebook.com/confirmemail.php?next=https%3A%2F%2Fwww.facebook.com%2Fnuwan.ballantudawa%2F#" target="_blank">
+    <i class="fab fa-facebook"></i>
+  </a>
+</div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="footer-col right">
+      <a href="privacy.html">PRIVACY POLICY</a>
+      <a href="terms.html">TERMS OF USE</a>
+      <p class="highlight">Eureka Consultants</p>
+      <p class="credit">Designed by NSA</p>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+</html>
